@@ -22,6 +22,8 @@
   - 圆形视界区域直径、垂直偏移量（Offset Y）、底衬开关与独立高斯模糊半径；
   - 气泡图标尺寸、紧凑度间距、内部留白比例及留白区域独立高斯模糊半径；
   - 鱼眼最大放大倍率、影响半径、选中图标内部缩放倍率及顶部提示胶囊背景开关。
+- **跨版本兼容适配**：系统 `BlurUtils#applyBlur` 在不同 SystemUI 版本存在 **2 参 / 3 参** 两种签名（17.03.x 新版为 2 参，20250121.x 及更早旧版为 3 参），模块在运行时按「方法名 + 参数个数」探测并缓存解析结果，旧版签名自动补 `withOpaque(false)` 与原生调用惯例严格对齐，不依赖版本号硬编码。
+- **模糊与压暗独立容错**：全屏高斯模糊与全屏压暗分别包裹容错，模糊解析或调用失败不再连带丢弃全屏压暗，异常日志附带宿主 SystemUI 版本号便于定位。
 
 ### 3. 指纹解锁进入等待时间可调（Hook 系统界面底层）
 - **等待阈值可调节**：通过 Hook `MiuiGxzwManager#dismissGxzwView` 中调度系统快捷面板的
@@ -92,7 +94,7 @@
 ## 📄 相关信息
 
 - **包名**：`io.github.qmryqmm.hyperopen`
-- **当前版本**：`v0.25`
+- **当前版本**：`v0.26`
 - **作者**：[青冥日月](https://www.coolapk.com/u/3268816)
 - **项目地址**：[https://github.com/qmryqmm/HyperOpen](https://github.com/qmryqmm/HyperOpen)
 - **UI 框架**：[Miuix KMP](https://github.com/miuix-kotlin-multiplatform/miuix)
