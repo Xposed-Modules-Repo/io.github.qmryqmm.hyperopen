@@ -6,6 +6,16 @@
 
 ---
 
+## 界面预览
+<img width="2982" height="2160" alt="IMG_20261023_103218" src="https://github.com/user-attachments/assets/b988d1e3-a1af-4b71-b2e1-cc6da6bbff71" />
+<img width="2982" height="2061" alt="IMG_20261023_110859_1792727309838edit" src="https://github.com/user-attachments/assets/29b85f04-203e-4f71-b707-bfe40eb02b75" />
+<img width="2982" height="2062" alt="IMG_20261023_110633_1792727319796edit" src="https://github.com/user-attachments/assets/e1abacb9-6e0d-41b8-a565-37ce06fa6877" />
+<img width="2982" height="2041" alt="IMG_20261023_110800_1792727292019edit" src="https://github.com/user-attachments/assets/59bc18c3-82c4-4360-aca7-18060c8953f2" />
+<img width="2982" height="2065" alt="IMG_20261023_103451_1792727336471edit" src="https://github.com/user-attachments/assets/237306bd-11d8-404f-8f73-dd3b04f6f103" />
+<img width="2982" height="2042" alt="IMG_20261023_103513_1792727328484edit" src="https://github.com/user-attachments/assets/592e69c2-a114-41e9-861c-9c0d9034877a" />
+
+---
+
 ## ✨ 核心特性
 
 ### 1. 多布局样式与物理鱼眼交互
