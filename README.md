@@ -2,17 +2,37 @@
 
 **HyperOpen** 是一款专为 **小米澎湃 OS（Xiaomi HyperOS）** 打造的屏下指纹快捷方式（FOD QuickOpen）深度增强 Xposed / LSPosed 模块。
 
-本模块通过接管并重构系统界面（`com.android.systemui`）中的指纹长按快捷面板，将系统原生单调的扇形有限快捷方式升级为**圆形蜂窝阵列视界**，带来兼具澎湃光学质感、丝滑鱼眼交互与极高自由度的指纹快捷启动体验。
+本模块通过接管并重构系统界面（`com.android.systemui`）中的指纹长按快捷面板，将系统原生单调的扇形有限快捷方式升级为**圆形蜂窝阵列、弧面扇形、空心圆环**样式，同时支持图标自定义排版和丰富的配置参数修改。带来兼具澎湃光学质感、丝滑鱼眼交互与极高自由度的指纹快捷启动体验。
 
 ---
 
-## 界面预览
+## 🎊界面预览
+
 <img width="2982" height="2160" alt="IMG_20261023_103218" src="https://github.com/user-attachments/assets/b988d1e3-a1af-4b71-b2e1-cc6da6bbff71" />
 <img width="2982" height="2061" alt="IMG_20261023_110859_1792727309838edit" src="https://github.com/user-attachments/assets/29b85f04-203e-4f71-b707-bfe40eb02b75" />
 <img width="2982" height="2062" alt="IMG_20261023_110633_1792727319796edit" src="https://github.com/user-attachments/assets/e1abacb9-6e0d-41b8-a565-37ce06fa6877" />
 <img width="2982" height="2041" alt="IMG_20261023_110800_1792727292019edit" src="https://github.com/user-attachments/assets/59bc18c3-82c4-4360-aca7-18060c8953f2" />
 <img width="2982" height="2065" alt="IMG_20261023_103451_1792727336471edit" src="https://github.com/user-attachments/assets/237306bd-11d8-404f-8f73-dd3b04f6f103" />
 <img width="2982" height="2042" alt="IMG_20261023_103513_1792727328484edit" src="https://github.com/user-attachments/assets/592e69c2-a114-41e9-861c-9c0d9034877a" />
+
+---
+
+## 📦 环境要求与安装使用
+
+### 环境要求
+- **系统版本**：小米澎湃 OS（Xiaomi HyperOS，Android 10 / API 29 及以上），设备需支持屏下指纹并已在系统设置中开启指纹快捷功能。
+- **框架环境**：已安装 **LSPosed**（推荐）或其他兼容 Xposed API 82+ 的框架。
+- **可选权限**：
+  - **Root 权限**：用于设置页「重启系统界面」一键生效，以及部分受限快捷方式（如微信深层页面）的 `am start` 兜底唤醒。
+  - **存储读取权限**：用于在应用内实时预览页加载当前系统真实桌面壁纸。
+
+### 使用步骤
+1. 前往 [Releases](https://github.com/qmryqmm/HyperOpen/releases) 页面下载最新版本的 APK 并安装。
+2. 打开 **LSPosed 管理器**，启用 **HyperOpen** 模块，并勾选作用域：**系统界面 (`com.android.systemui`)**。
+3. 打开 **HyperOpen** 应用，根据喜好调整视觉参数与快捷方式列表。
+4. 在模块「设置」页点击 **「重启系统界面」**（或通过 LSPosed 重启 SystemUI 作用域）完成首次挂载。
+5. 使用指纹解锁手机时，**保持手指按压在指纹传感器区域**即可唤出 HyperOpen 快捷面板，滑动至目标图标松手即可触发。
+   > 💡 **提示**：首次挂载生效后，日常修改快捷方式或调整外观参数均通过跨进程 Provider 与广播**实时热生效**，无需再次重启系统界面。
 
 ---
 
@@ -79,25 +99,6 @@
 
 ### 10. 原生澎湃风格 UI
 - 模块配置界面基于 **Miuix Compose 0.9.4** 构建，支持跟随系统 / 浅色 / 深色模式、**Monet 动态取色** 以及 **胶囊悬浮底栏**。
-
----
-
-## 📦 环境要求与安装使用
-
-### 环境要求
-- **系统版本**：小米澎湃 OS（Xiaomi HyperOS，Android 10 / API 29 及以上），设备需支持屏下指纹并已在系统设置中开启指纹快捷功能。
-- **框架环境**：已安装 **LSPosed**（推荐）或其他兼容 Xposed API 82+ 的框架。
-- **可选权限**：
-  - **Root 权限**：用于设置页「重启系统界面」一键生效，以及部分受限快捷方式（如微信深层页面）的 `am start` 兜底唤醒。
-  - **存储读取权限**：用于在应用内实时预览页加载当前系统真实桌面壁纸。
-
-### 使用步骤
-1. 前往 [Releases](https://github.com/qmryqmm/HyperOpen/releases) 页面下载最新版本的 APK 并安装。
-2. 打开 **LSPosed 管理器**，启用 **HyperOpen** 模块，并勾选作用域：**系统界面 (`com.android.systemui`)**。
-3. 打开 **HyperOpen** 应用，根据喜好调整视觉参数与快捷方式列表。
-4. 在模块「设置」页点击 **「重启系统界面」**（或通过 LSPosed 重启 SystemUI 作用域）完成首次挂载。
-5. 使用指纹解锁手机时，**保持手指按压在指纹传感器区域**即可唤出 HyperOpen 快捷面板，滑动至目标图标松手即可触发。
-   > 💡 **提示**：首次挂载生效后，日常修改快捷方式或调整外观参数均通过跨进程 Provider 与广播**实时热生效**，无需再次重启系统界面。
 
 ---
 
